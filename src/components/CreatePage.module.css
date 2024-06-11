@@ -1,0 +1,139 @@
+/* src/components/CreatePage.module.css */
+.basicMode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quillContainer {
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.switchEditor {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.switchEditor a {
+  color: #E1F7F5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switchEditor a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: #1E0342;
+  color: #9AC8CD;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 5px;  
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+.buttonAdvanced {
+  background-color: #1E0342;
+  color: #9AC8CD;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 5px;  
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: #9AC8CD;
+  color: #1E0342;
+}
+
+.buttonAdvanced:hover {
+  background-color: #9AC8CD;
+  color: #1E0342;
+}
+
+.submitButton, .previewButton {
+  background-color: #1E0342;
+  color: #9AC8CD;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  width: 200px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.submitButton:hover, .previewButton:hover {
+  background-color: #9AC8CD;
+  color: #1E0342;
+}
+
+.input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #9AC8CD;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+.largeTextarea {
+  height: 200px;  /* Adjust as necessary for your needs */
+  resize: vertical;
+  overflow: auto;
+}
+
+.largeTextarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+.largeTextarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.largeTextarea::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.largeTextarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.buttonGroup {
+  padding: auto;
+}

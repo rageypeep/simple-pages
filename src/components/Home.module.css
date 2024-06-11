@@ -1,0 +1,30 @@
+/* src/components/Home.module.css */
+.App {
+    text-align: center;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  .boxContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .box {
+    background-color: #0E46A3;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .box:hover {
+    background-color: #06356b;
+  }
+  
