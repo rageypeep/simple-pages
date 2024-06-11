@@ -1,16 +1,18 @@
 // src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import { AuthProvider } from './AuthContext';
-import './quillStyles.css';
+import styles from './quillStyles.css'
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <Router>
     <AuthProvider>
       <App />
     </AuthProvider>
-  </Router>,
-  document.getElementById('root')
+  </Router>
 );
