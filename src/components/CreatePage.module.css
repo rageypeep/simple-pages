@@ -106,6 +106,15 @@
   width: 100%;
 }
 
+.inputTitle {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #9AC8CD;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  width: 50rem;
+}
+
 .largeTextarea {
   height: 200px;  /* Adjust as necessary for your needs */
   resize: vertical;
