@@ -1,0 +1,8 @@
+/* src/components/Register.module.css */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+  }
+  

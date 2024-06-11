@@ -1,0 +1,33 @@
+/* src/components/Header.module.css */
+.header {
+    background-color: #0E46A3;
+    padding: 20px;
+    color: #E1F7F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.title {
+    margin: 0;
+  }
+  
+.formContainer {
+    margin-right: 50px;
+  }
+  
+.button {
+    background-color: red;
+    color: #E1F7F5;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    text-align: center;
+  }
+.link {
+    color: #E1F7F5;
+    text-decoration: none;
+}

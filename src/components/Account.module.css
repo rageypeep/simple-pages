@@ -1,0 +1,35 @@
+/* src/components/Account.module.css */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #9AC8CD;
+    border-radius: 5px;
+  }
+  
+  .form button {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0E46A3;
+    color: white;
+    border: none;
+  }
+  
+  .form button:hover {
+    background-color: #06356b;
+  }
+  

@@ -1,0 +1,48 @@
+/* src/components/UserMenu.module.css */
+.avatarContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   
+  }
+  
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .dropdownMenu {
+    width: 150px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0E46A3;
+    color: #E1F7F5;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    overflow: hidden;
+    z-index: 1001;
+    margin-top: 20px;
+  }
+  
+  .dropdownMenu.show {
+    display: block;
+  }
+  
+  .dropdownMenu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #E1F7F5;
+  }
+  
+  .dropdownMenu a:hover {
+    background-color: #9AC8CD;
+    color: #1E0342;
+  }
+  

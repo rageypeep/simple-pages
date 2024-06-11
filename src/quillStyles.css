@@ -1,0 +1,96 @@
+/* Global CSS styles for Quill */
+.ql-toolbar.ql-snow {
+    background-color: #1E0342 !important;
+    border: solid 1px!important;
+    border-color: #9AC8CD;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker {
+    color: #9AC8CD !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-label:hover,
+  .ql-toolbar.ql-snow .ql-picker-item:hover {
+    color: #E1F7F5 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-stroke {
+    stroke: #9AC8CD !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-fill {
+    fill: #9AC8CD !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-label.ql-active,
+  .ql-toolbar.ql-snow .ql-picker-item.ql-selected {
+    color: #E1F7F5 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-options {
+    background-color: #1E0342 !important;
+    border: none !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-item {
+    color: #9AC8CD !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-item:hover {
+    background-color: #E1F7F5 !important;
+    color: #1E0342 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-item.ql-selected {
+    color: #E1F7F5 !important;
+    background-color: #1E0342 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+    border: none !important;
+    background-color: #1E0342 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-picker-label {
+    border: none !important;
+    background-color: #1E0342 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-active {
+    color: #E1F7F5 !important;
+  }
+  
+  /* Styling toolbar buttons */
+  .ql-toolbar.ql-snow .ql-formats button {
+    border: 1px solid #0E46A3 !important;
+    border-radius: 5px !important;
+    margin-right: 5px !important; /* Add space between buttons */
+    /*padding: 5px !important;  Add padding inside buttons */
+  }
+  
+  .ql-toolbar.ql-snow .ql-formats button:hover {
+    background-color: #9AC8CD !important;
+    color: #1E0342 !important;
+  }
+  
+  /* Ensure icon color changes on hover */
+  .ql-toolbar.ql-snow .ql-formats button:hover .ql-stroke {
+    stroke: #1E0342 !important;
+  }
+  
+  .ql-toolbar.ql-snow .ql-formats button:hover .ql-fill {
+    fill: #1E0342 !important;
+  }
+  /* Custom text highlight color */
+  .ql-editor ::selection {
+    background-color: #9AC8CD; /* Highlight background color */
+    color: #1E0342; /* Highlight text color */
+  }
+  .ql-editor {
+    height: 500px;
+    border: solid 1px;
+    
+  }
+  
