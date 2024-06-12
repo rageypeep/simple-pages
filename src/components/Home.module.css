@@ -7,24 +7,33 @@
     margin-top: 20px;
   }
   
-  .boxContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .box {
-    background-color: #0E46A3;
-    color: white;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
+ 
   .box:hover {
     background-color: #06356b;
   }
-  
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  background-color: #0E46A3;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+

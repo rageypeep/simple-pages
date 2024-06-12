@@ -1,28 +1,61 @@
 // src/components/Home.js
-import React, { useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
-import styles from '../App.module.css';
+import axios from 'axios';
 import { AuthContext } from '../AuthContext';
+import Header from './Header';
+import styles from './Home.module.css';
+import appStyles from '../App.module.css';
 
-function Home() {
-  const { loggedIn, userRole } = useContext(AuthContext);
+const Home = () => {
+  const { loggedIn } = useContext(AuthContext);
+  const [pages, setPages] = useState([]);
+
+  useEffect(() => {
+    if (loggedIn) {
+      const fetchPages = async () => {
+        const token = localStorage.getItem('token');
+        console.log('Token:', token); // Debug statement
+        try {
+          const response = await axios.get('http://localhost:3001/user-pages', {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          setPages(response.data);
+        } catch (error) {
+          console.error('Error fetching user pages:', error);
+        }
+      };
+
+      fetchPages();
+    }
+  }, [loggedIn]);
 
   return (
-    <div className={styles.App}>
+    <div className={appStyles.App}>
       <Header />
-      <div className={styles.content}>
-        {loggedIn && (
+      <div className={appStyles.content}>
+        {loggedIn ? (
           <div className={styles.boxContainer}>
-            <Link to="/create-basic-page" className={styles.box}>Create a new page</Link>
-            <Link to="/create-basic-page" className={styles.box}>Create a new page</Link>
-            <Link to="/create-basic-page" className={styles.box}>Create a new page</Link>
+            {pages.map((page) => (
+              <Link to={`/page/${page.id}`} key={page.id} className={styles.box}>
+                {page.title}
+              </Link>
+            ))}
+            <Link to="/create-basic-page" className={styles.box}>
+              Create a new Page
+            </Link>
+          </div>
+        ) : (
+          <div className={styles.boxContainer}>
+            <h2>Welcome to Simple Pages</h2>
           </div>
         )}
-        <h2>Welcome to Simple Pages</h2>
+        <h2></h2>
       </div>
     </div>
   );
-}
+};
 
 export default Home;

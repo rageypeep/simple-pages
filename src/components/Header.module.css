@@ -1,12 +1,18 @@
 /* src/components/Header.module.css */
 .header {
-    background-color: #0E46A3;
-    padding: 20px;
-    color: #E1F7F5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0E46A3;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
   
 .title {
     margin: 0;

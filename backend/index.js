@@ -1,4 +1,3 @@
-// backend/index.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -81,15 +80,28 @@ app.post('/login', async (req, res) => {
 });
 
 const authenticateToken = (req, res, next) => {
-  const token = req.headers['authorization'].split(' ')[1];
-  if (!token) return res.sendStatus(401);
+  const authHeader = req.headers['authorization'];
+  if (!authHeader) {
+    console.log('No authorization header'); // Debug statement
+    return res.sendStatus(401);
+  }
+
+  const token = authHeader.split(' ')[1];
+  if (!token) {
+    console.log('No token found'); // Debug statement
+    return res.sendStatus(401);
+  }
 
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
+    if (err) {
+      console.log('Token verification failed:', err); // Debug statement
+      return res.sendStatus(403);
+    }
     req.user = user;
     next();
   });
 };
+
 
 const authorizeRole = (roles) => {
   return (req, res, next) => {
@@ -206,6 +218,34 @@ app.get('/pages', async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve pages' });
   }
 });
+
+// Endpoint to get pages for the logged-in user
+app.get('/user-pages', authenticateToken, async (req, res) => {
+  try {
+    const result = await pool.query('SELECT id, title FROM pages WHERE user_id = $1', [req.user.userId]);
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error retrieving user pages:', error);
+    res.status(500).json({ error: 'Failed to retrieve user pages' });
+  }
+});
+
+// Endpoint to get a single page by ID
+app.get('/page/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await pool.query('SELECT title, content FROM pages WHERE id = $1', [id]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Page not found' });
+    }
+    res.json(result.rows[0]);
+  } catch (error) {
+    console.error('Error retrieving page:', error);
+    res.status(500).json({ error: 'Failed to retrieve page' });
+  }
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

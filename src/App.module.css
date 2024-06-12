@@ -1,26 +1,11 @@
 /* src/App.module.css */
 .App {
   background-color: #1E0342;
-  color: white;
+  color: #E1F7F5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #0E46A3;
-  font-family: 'Roboto', sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
 }
 
 .title {
@@ -34,7 +19,7 @@
   align-items: center;
   width: 100%; /* Ensure it takes full width */
   padding: 1rem; /* Add padding for spacing */
-  border-radius: 5px;
+  
 }
 
 .formContainer {

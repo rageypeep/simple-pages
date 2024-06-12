@@ -8,6 +8,7 @@ import Admin from './components/Admin';
 import CreateBasicPage from './components/CreateBasicPage';
 import CreateAdvancedPage from './components/CreateAdvancedPage';
 import Home from './components/Home';
+import ViewPage from './components/ViewPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/admin" element={<Admin />} />
       <Route path="/create-basic-page" element={<CreateBasicPage />} />
       <Route path="/create-advanced-page" element={<CreateAdvancedPage />} />
+      <Route path="/page/:id" element={<ViewPage />} />
     </Routes>
   );
 }
