@@ -4,6 +4,7 @@ import axios from 'axios';
 import styles from './Account.module.css';
 import appStyles from '../App.module.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Account() {
   const [userData, setUserData] = useState({
@@ -112,16 +113,16 @@ function Account() {
   };
 
   return (
-    <div className={appStyles.content}>
-      <div className={appStyles.card}>
-        <a href='/'>&#8610; Back to Simple Pages</a>
+    <div className={styles.content}>
+      <div className={styles.card}>
+        <Link to='/' className={styles.link}>&#8610; Back to Simple Pages</Link>
         <h2>Account Settings</h2>
         <div className={styles.form}>
-          <label>Username (cannot be changed): {userData.username}</label>
+          <label>Username: {userData.username}</label>
           <input
             type="email"
             name="email"
-            className={appStyles.input}
+            
             placeholder="Email"
             value={userData.email || ''}
             onChange={handleInputChange}
@@ -129,7 +130,7 @@ function Account() {
           <input
             type="text"
             name="firstName"
-            className={appStyles.input}
+            
             placeholder="First Name"
             value={userData.firstName || ''}
             onChange={handleInputChange}
@@ -137,7 +138,7 @@ function Account() {
           <input
             type="text"
             name="lastName"
-            className={appStyles.input}
+            
             placeholder="Last Name"
             value={userData.lastName || ''}
             onChange={handleInputChange}
@@ -145,7 +146,6 @@ function Account() {
           <input
             type="text"
             name="phone"
-            className={appStyles.input}
             placeholder="Phone"
             value={userData.phone || ''}
             onChange={handleInputChange}
@@ -156,14 +156,14 @@ function Account() {
           <h3>Change Password</h3>
           <input
             type="password"
-            className={appStyles.input}
+            
             placeholder="Current Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <input
             type="password"
-            className={appStyles.input}
+            
             placeholder="New Password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}

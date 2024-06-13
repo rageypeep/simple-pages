@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import styles from './CreatePage.module.css';
-import appStyles from '../App.module.css';
 import { AuthContext } from '../AuthContext';
 
 const CreateBasicPage = () => {
@@ -62,10 +61,10 @@ const CreateBasicPage = () => {
   };
 
   return (
-    <div className={appStyles.App}>
+    <div className={styles.App}>
       <Header />
-      <div className={appStyles.content}>
-        <div className={appStyles.card}>
+      <div className={styles.content}>
+        <div className={styles.card}>
           <h2>Create a New Page - Basic Mode</h2>
           {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
           <div className={styles.basicMode}>
@@ -75,7 +74,7 @@ const CreateBasicPage = () => {
                 placeholder="Page Header"
                 value={header}
                 onChange={handleHeaderChange}
-                className={appStyles.input}
+                className={styles.input}
                 aria-label="Page Header"
               />
             </div>
@@ -89,7 +88,7 @@ const CreateBasicPage = () => {
                     onChange={(e) =>
                       handleSectionChange(index, 'subheader', e.target.value)
                     }
-                    className={appStyles.input}
+                    className={styles.input}
                     aria-label={`Subheader ${index + 1}`}
                   />
                   <textarea

@@ -25,7 +25,7 @@ function Login() {
   };
 
   return (
-    <div className={appStyles.card}>
+    <div className={styles.card}>
       <h2>Login</h2>
       <div className={styles.form}>
         <input

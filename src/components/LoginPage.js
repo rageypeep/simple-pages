@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../AuthContext';
 import styles from './LoginPage.module.css';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -30,6 +31,7 @@ const LoginPage = () => {
 
   return (
     <div className={styles.loginContainer}>
+      <Link to='/' className={styles.link}>&#8610; Back to Simple Pages</Link>
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input
@@ -49,6 +51,10 @@ const LoginPage = () => {
         <button type="submit" className={styles.button}>Sign In</button>
         {error && <p className={styles.error}>{error}</p>}
       </form>
+      <div className={styles.textBox}>
+        <label>OR</label>
+        <Link to="/register">Register Now</Link>
+      </div>
     </div>
   );
 };

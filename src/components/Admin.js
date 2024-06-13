@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './Admin.module.css';
-import appStyles from '../App.module.css';
+import { Link } from'react-router-dom';
+
 
 function Admin() {
   const [users, setUsers] = useState([]);
@@ -61,12 +62,12 @@ function Admin() {
   };
 
   return (
-    <div className={appStyles.content}>
-      <div className={appStyles.card}>
-      <a href='/'>&#8610; Back to Simple Pages</a>
+    <div className={styles.content}>
+      <div className={styles.card}>
+      <Link to='/' className={styles.link}>&#8610; Back to Simple Pages</Link>
         <h2>Admin Panel</h2>
-        {error && <div className={`${appStyles.alert} ${appStyles.alertError}`}>{error}</div>}
-        {message && <div className={`${appStyles.alert} ${appStyles.alertSuccess}`}>{message}</div>}
+        {error && <div className={`${styles.alert} ${styles.alertError}`}>{error}</div>}
+        {message && <div className={`${styles.alert} ${styles.alertSuccess}`}>{message}</div>}
         <table className={styles.table}>
           <thead>
             <tr>
@@ -93,7 +94,7 @@ function Admin() {
                 </td>
                 <td>
                   <button
-                    className={appStyles.button}
+                    className={styles.button}
                     onClick={() => handleDeleteUser(user.id)}
                   >
                     Delete

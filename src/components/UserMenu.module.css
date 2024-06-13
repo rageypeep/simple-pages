@@ -20,14 +20,17 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #0E46A3;
-    color: #E1F7F5;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #526D82;
+    color: #DDE6ED;
+    box-shadow: 10px 10px 10px 0 rgb(211, 230, 237, 0.2);
+    border-bottom: solid 2px #DDE6ED;
+    border-left: solid 2px #DDE6ED;
+    border-Right: solid 2px #DDE6ED;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     overflow: hidden;
     z-index: 1001;
-    margin-top: 20px;
+    margin-top: 18px;
   }
   
   .dropdownMenu.show {
@@ -42,7 +45,7 @@
   }
   
   .dropdownMenu a:hover {
-    background-color: #9AC8CD;
-    color: #1E0342;
+    background-color: #DDE6ED;
+    color: #526D82;
   }
   

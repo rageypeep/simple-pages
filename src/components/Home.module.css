@@ -1,15 +1,11 @@
 /* src/components/Home.module.css */
-.App {
-    text-align: center;
-  }
-  
-  .content {
+  .contentSpacer {
     margin-top: 20px;
   }
   
  
   .box:hover {
-    background-color: #06356b;
+    background-color: #27374D;
   }
 
 .boxContainer {
@@ -20,20 +16,29 @@
 }
 
 .box {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
   height: 200px;
-  background-color: #0E46A3;
-  color: #333;
-  border: 2px solid #ccc;
+  background-color: #526D82;
+  color: #9DB2BF;
+  border: 2px solid #DDE6ED;
   border-radius: 2px;
   text-decoration: none;
   font-size: 1.2rem;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
-
+.content {
+  margin-top: 75px;
+  background-color: #27374D;
+  color: #DDE6ED;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
 

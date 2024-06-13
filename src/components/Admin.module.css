@@ -1,5 +1,6 @@
 /* src/components/Admin.module.css */
 .table {
+    color: #DDE6ED;
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
@@ -7,12 +8,77 @@
   
   .table th,
   .table td {
-    border: 1px solid #ddd;
+    border: 1px solid #DDE6ED;
     padding: 8px;
     text-align: left;
   }
   
   .table th {
-    background-color: #f2f2f2;
+    background-color: #9DB2BF;
+  }
+  .content {
+    margin-top: 10px; /* Adjust based on header height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure it takes full width */
+    padding: 1rem; /* Add padding for spacing */
+    
+  }
+  .card {
+    background-color: #526D82;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 rgb(211, 230, 237, 0.2);
+    font-family: 'Roboto', sans-serif;
+  }
+  .alert {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
   }
   
+  .alertSuccess {
+    background-color: #9AC8CD;
+  }
+  
+  .alertError {
+    background-color: #E57373;
+  }
+
+  .button {
+    background-color: #27374D;
+    color: #DDE6ED;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    margin-right: 50px;
+    width: 200px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    text-align: center;
+  }  
+  .button:hover {
+    background-color: #9DB2BF;
+    color: #27374D;
+  }
+  .link {
+    color: #DDE6ED;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .link:visited {
+    color: #DDE6ED;
+    text-decoration: none;
+    cursor: pointer; 
+  }
+  .link:active {
+    color: #DDE6ED;
+    text-decoration: none;
+    cursor: pointer; 
+  }
+  .link:hover{
+    color: #27374D;
+  }

@@ -1,4 +1,28 @@
 /* src/components/CreatePage.module.css */
+.App {
+  background-color: #27374D;
+  color: #E1F7F5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+.content {
+  margin-top: 90px; /* Adjust based on header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width */
+  padding: 1rem; /* Add padding for spacing */
+  
+}
+.card {
+  background-color: #526D82;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 rgb(211, 230, 237, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
 .basicMode {
   display: flex;
   flex-direction: column;
@@ -42,59 +66,65 @@
 }
 
 .button {
-  background-color: #1E0342;
-  color: #9AC8CD;
+  background-color: #27374D;
+  color: #9DB2BF;
   border: none;
   padding: 1rem 1rem;
-  border-radius: 5px;  
+  border-radius: 2px;  
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   text-align: center;
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 .buttonAdvanced {
-  background-color: #1E0342;
-  color: #9AC8CD;
+  background-color: #27374D;
+  color: #9DB2BF;
   border: none;
   padding: 1rem 1rem;
-  border-radius: 5px;  
+  border-radius: 2px;  
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   text-align: center;
   width: 200px;
   margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #9AC8CD;
-  color: #1E0342;
+  background-color: #9DB2BF;
+  color: #27374D;
+  box-shadow: 0 10px 10px 0 rgb(39, 55, 77, 0.2);
 }
 
 .buttonAdvanced:hover {
-  background-color: #9AC8CD;
-  color: #1E0342;
+  background-color: #9DB2BF;
+  color: #27374D;
+  box-shadow: 0 10px 10px 0 rgb(39, 55, 77, 0.2);
 }
 
 .submitButton, .previewButton {
-  background-color: #1E0342;
-  color: #9AC8CD;
+  background-color: #27374D;
+  color: #9DB2BF;
   border: none;
   padding: 1rem 1rem;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 200px;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   text-align: center;
   margin: 10px 10px;
+  transition: background-color 0.3s ease;
 }
 
 .submitButton:hover, .previewButton:hover {
-  background-color: #9AC8CD;
-  color: #1E0342;
+  background-color: #9DB2BF;
+  color: #27374D;
+  box-shadow: 0 10px 10px 0 rgb(39, 55, 77, 0.2);
 }
 
 .input {
@@ -123,6 +153,7 @@
 
 .largeTextarea::-webkit-scrollbar {
   width: 12px;
+  scrollbar-width: thin;
 }
 
 .largeTextarea::-webkit-scrollbar-track {

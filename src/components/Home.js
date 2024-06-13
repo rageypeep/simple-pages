@@ -5,7 +5,7 @@ import axios from 'axios';
 import { AuthContext } from '../AuthContext';
 import Header from './Header';
 import styles from './Home.module.css';
-import appStyles from '../App.module.css';
+
 
 const Home = () => {
   const { loggedIn } = useContext(AuthContext);
@@ -33,9 +33,9 @@ const Home = () => {
   }, [loggedIn]);
 
   return (
-    <div className={appStyles.App}>
+    <div className={styles.content}>
       <Header />
-      <div className={appStyles.content}>
+      <div>
         {loggedIn ? (
           <div className={styles.boxContainer}>
             {pages.map((page) => (
@@ -52,7 +52,7 @@ const Home = () => {
             <h2>Welcome to Simple Pages</h2>
           </div>
         )}
-        <h2></h2>
+        
       </div>
     </div>
   );

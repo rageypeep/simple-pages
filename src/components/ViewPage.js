@@ -39,7 +39,7 @@ const ViewPage = () => {
     <div className={styles.pageContainer}>
       <Header />
       {page ? (
-        <div className={styles.content}>
+        <div className={styles.pageContent}>
           <h1 className={styles.title}>{page.title}</h1>
           <div
             className={styles.pageContent}
