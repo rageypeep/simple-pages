@@ -8,8 +8,9 @@ import { Link } from 'react-router-dom';
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
   const [error, setError] = useState('');
-  const { setLoggedIn } = useContext(AuthContext);
+  const { setLoggedIn, setUserRole } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -20,10 +21,15 @@ const LoginPage = () => {
         username,
         password,
       });
-
       localStorage.setItem('token', response.data.token);
       setLoggedIn(true); // Update the loggedIn state
-      navigate('/');
+
+      // Check if the user is an admin
+      const userResponse = await axios.get('http://localhost:3001/account', {
+        headers: { Authorization: `Bearer ${response.data.token}` }
+      });
+      setUserRole(userResponse.data.role);
+      navigate('/');      
     } catch (error) {
       setError('Invalid username or password');
     }
