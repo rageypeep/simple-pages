@@ -67,7 +67,7 @@ const ViewPage = () => {
           </header>
           <div className={styles.mainContent}>
             <div className={styles.headerLinksContainer}>
-              <h2>Links</h2>
+              {/*<h2>Links</h2>*/}
               <ul className={styles.headerLinks}>
                 {sections.map((section) => (
                 <li key={section.subheader}><a href={`#${section.subheader}`}>{section.subheader}</a></li>

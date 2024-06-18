@@ -40,19 +40,21 @@
   padding: 20px;
   text-align: center;
   color: #DDE6ED;
-  box-shadow: 0px 10px 10px 0 rgb(211, 230, 237, 0.2);
+  box-shadow: 2px 10px 10px 0 rgb(211, 230, 237, 0.2);
   border: solid #DDE6ED;
   border-radius: 2px;
+  position: sticky;
+  top: 100px;
 }
 
 .headerLinks {
-  list-style-type: none;
-  padding: 0;
-  
+  list-style-type: none;  
 }
 
 .headerLinks li {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: table-column;
+  margin: 20px 20px;
 }
 
 .pageContent {
@@ -61,3 +63,18 @@
   padding: 20px;
   color: #DDE6ED;
 }
+
+.headerLinks a {
+  color: #DDE6ED;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem 5rem;
+  border: solid #27374D;
+}
+
+.headerLinks a:hover {
+  color: #526D82;
+  background-color: #DDE6ED;
+  box-shadow: 2px 10px 10px 2px rgb(211, 230, 237, 0.2);
+}
+
