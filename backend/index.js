@@ -245,6 +245,18 @@ app.get('/page/:id', async (req, res) => {
   }
 });
 
+// Endpoint to delete a page by ID
+app.delete('/pages/:id', authenticateToken, async (req, res) => {
+  const { id } = req.params;
+  try {
+    await pool.query('DELETE FROM pages WHERE id = $1', [id]);
+    res.json({ message: 'Page deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting page:', error);
+    res.status(500).json({ error: 'Failed to delete page' });
+  }
+});
+
 
 
 app.listen(port, () => {
